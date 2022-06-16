@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+</head>
+<body>
+    <h1>Edit Product</h1>
+    <form action="/products/<%=product._id %>?_method=PUT" method="POST">
+        Title: <input type="text" name="Title" value="<%=product.title%>" /><br />
+        Author: <input type="text" name="author" value="<%=product.author%>" /><br />
+        Completed: <input type="checkbox" name="completed" <% if(product.completed === true){ %> checked <% } %> />
+        <br />
+        <input type="submit" value="Submit Changes" />
+    </form>
+</body>
+</html>
